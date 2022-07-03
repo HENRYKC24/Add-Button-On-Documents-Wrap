@@ -1,5 +1,5 @@
 # File Table App
-This is a mini application that displays different files and salaries in a well formatted table.
+This is a mini application that displays different documents and salaries in a well formatted table.
 
 ## Built With
 
@@ -10,22 +10,17 @@ This is a mini application that displays different files and salaries in a well 
 
 ## Live Demo
 
-[Live Demo Link](https://henry-kc-bookstore-app.herokuapp.com/)
+[Live Demo Link](https://henry-kc-salary-documents-app.herokuapp.com/)
 
 ## App Screenshots
 ### Desktop View
-![screenshot](./app_screenshot.png)
+![screenshot](./desktop.png)
 
 ### Mobile View
-![screenshot](./app_screenshot_mobile.png)
-
-## Available Scripts
-
-In the project directory, you can run:
+![screenshot](./mobile.png)
 
 ## Getting Started
-
-### Get A Local Copy
+### Get A Local Copy And Run Application Locally
 ```bash
 git clone https://github.com/HENRYKC24/Aerial-Ops-Challenge.git
 
@@ -64,7 +59,6 @@ Feel free to check the [issues page](https://github.com/HENRYKC24/Aerial-Ops-Cha
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- I remain indebted to every developer who has helped me in one way or the other in building this application.
 - A special thanks to [Aerial Ops](https://aerialops.io/) for availing me this wonderful opportunity to learn new technologies.
 
 ## 📝 License
