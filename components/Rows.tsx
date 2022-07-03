@@ -1,14 +1,14 @@
 import React from 'react';
 import mockData from '../utils/mockData';
-
 import { Record } from '../utils/types';
 import { Group, Stack } from '@mantine/core';
-
 import styles from '../styles/Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronDown,
+  faChevronUp,
+  faFilePdf,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Rows: React.FC<{
   open: boolean[];
@@ -47,7 +47,14 @@ const Rows: React.FC<{
                 {el.documents.map((el) => (
                   <div className={styles.document} key={el.id}>
                     <FontAwesomeIcon
-                      style={{ marginRight: '5px' }}
+                      style={{
+                        borderRadius: 5,
+                        marginRight: '5px',
+                        color: 'rgb(190, 186, 186)',
+                        height: '30px',
+                        width: '30px',
+                        border: '3px solid',
+                      }}
                       icon={faFilePdf}
                     />
                     {el.name}
@@ -59,9 +66,9 @@ const Rows: React.FC<{
                   style={{
                     position: 'absolute',
                     backgroundColor: 'white',
-                    border: '1px solid grey',
+                    border: '1px solid rgb(190, 186, 186)',
                     padding: '10px',
-                    height: '150px',
+                    maxHeight: '200px',
                     overflow: 'auto',
                   }}
                   className={styles.stack}
@@ -69,7 +76,7 @@ const Rows: React.FC<{
                   {el.documents.map((el) => (
                     <div className={styles.menuItem} key={el.id}>
                       <FontAwesomeIcon
-                        style={{ marginRight: '5px' }}
+                        style={{ marginRight: '5px', color: 'black' }}
                         icon={faFilePdf}
                       />
                       {el.name}

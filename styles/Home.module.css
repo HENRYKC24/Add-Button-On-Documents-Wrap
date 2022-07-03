@@ -5,9 +5,20 @@
 
 .document {
   background-color: white;
-  border: 1px solid grey;
-  padding: 5px;
+  border: 1px solid rgb(190, 186, 186);
+  padding: 0 5px 0 0;
   border-radius: 5px;
+  color: #4380d1;
+  display: flex;
+  align-items: center;
+}
+
+.document:hover {
+  cursor: pointer;
+}
+
+.td {
+  border: 1px solid red;
 }
 
 @media (max-width: 800px) {
@@ -25,12 +36,13 @@
     height: 30px;
     display: flex;
     align-items: center;
-    border: 1px solid grey;
+    border: 1px solid rgb(190, 186, 186);
     border-radius: 5px;
   }
 
   .menuItem {
     padding: 5px;
+    color: #4380d1;
   }
 
   .menuItem:hover {

@@ -10,7 +10,7 @@ const mockData = [
   },
   {
     id: '2',
-    salary: 15000,
+    salary: 36000,
     documents: [
       { id: '1', name: 'Offer.pdf' },
       { id: '2', name: 'Employment.pdf' },
@@ -24,7 +24,7 @@ const mockData = [
   },
   {
     id: '3',
-    salary: 15000,
+    salary: 20000,
     documents: [
       { id: '1', name: 'Offer.pdf' },
       { id: '2', name: 'Employment.pdf' },
