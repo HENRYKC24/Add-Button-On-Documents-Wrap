@@ -26,7 +26,7 @@ git clone https://github.com/HENRYKC24/Aerial-Ops-Challenge.git
 
 cd Aerial-Ops-Challenge
 
-npm 
+npm install
 
 npm run dev
 
