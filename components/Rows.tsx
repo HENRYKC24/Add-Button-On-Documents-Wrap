@@ -76,7 +76,7 @@ const Rows: React.FC<{
                   {el.documents.map((el) => (
                     <div className={styles.menuItem} key={el.id}>
                       <FontAwesomeIcon
-                        style={{ marginRight: '5px', color: 'black' }}
+                        style={{ marginRight: '5px', color: 'rgb(190, 186, 186)'}}
                         icon={faFilePdf}
                       />
                       {el.name}

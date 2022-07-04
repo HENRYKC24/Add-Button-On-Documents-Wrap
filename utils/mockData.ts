@@ -19,7 +19,6 @@ const mockData = [
       { id: '5', name: 'Offer.pdf' },
       { id: '6', name: 'Communication_line.pdf' },
       { id: '7', name: 'Offer.pdf' },
-      { id: '8', name: 'Assignment.pdf' }
     ]
   },
   {

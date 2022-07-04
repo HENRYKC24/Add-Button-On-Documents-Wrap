@@ -43,6 +43,7 @@
   .menuItem {
     padding: 5px;
     color: #4380d1;
+    border-bottom: 2px solid rgb(190, 186, 186);
   }
 
   .menuItem:hover {
