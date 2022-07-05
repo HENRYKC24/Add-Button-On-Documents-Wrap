@@ -3,6 +3,10 @@
   display: none;
 }
 
+.expandCollapseButton:hover {
+  cursor: pointer;
+}
+
 .document {
   background-color: white;
   border: 1px solid rgb(190, 186, 186);

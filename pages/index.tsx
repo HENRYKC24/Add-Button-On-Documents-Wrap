@@ -5,7 +5,7 @@ import { Table } from '@mantine/core';
 import Rows from '../components/Rows';
 
 const Home: NextPage = () => {
-  const [open, setOpen] = useState<boolean[]>([false, false, false]);
+  const [open, setOpen] = useState<boolean[]>([]);
 
   return (
     <>
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         striped
         highlightOnHover
         horizontalSpacing="xs"
-        onClick={() => setOpen(() => [false, false, false])}
+        onClick={() => setOpen(() => [])}
       >
         <thead>
           <tr>

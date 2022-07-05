@@ -29,9 +29,7 @@ const Rows: React.FC<{
                   e.stopPropagation();
                   setOpen((prev): boolean[] => {
                     const currentStatus: boolean = prev[index];
-                    const wantedStates: boolean[] = prev.map(
-                      (): boolean => false
-                    );
+                    const wantedStates: boolean[] = [];
                     wantedStates[index] = !currentStatus;
                     return wantedStates;
                   });
@@ -76,7 +74,10 @@ const Rows: React.FC<{
                   {el.documents.map((el) => (
                     <div className={styles.menuItem} key={el.id}>
                       <FontAwesomeIcon
-                        style={{ marginRight: '5px', color: 'rgb(190, 186, 186)'}}
+                        style={{
+                          marginRight: '5px',
+                          color: 'rgb(190, 186, 186)',
+                        }}
                         icon={faFilePdf}
                       />
                       {el.name}

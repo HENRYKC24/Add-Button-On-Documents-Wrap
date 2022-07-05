@@ -29,6 +29,15 @@ const mockData = [
       { id: '2', name: 'Employment.pdf' },
       { id: '3', name: 'Assignment.pdf' }
     ]
+  },
+  {
+    id: '4',
+    salary: 20000,
+    documents: [
+      { id: '1', name: 'Offer.pdf' },
+      { id: '2', name: 'Employment.pdf' },
+      { id: '3', name: 'Assignment.pdf' }
+    ]
   }
 ]
 
