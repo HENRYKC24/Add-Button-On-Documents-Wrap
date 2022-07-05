@@ -41,6 +41,6 @@ const mockData: Record[] = [
       { id: '3', name: 'Assignment.pdf' }
     ]
   }
-]
+];
 
 export default mockData;

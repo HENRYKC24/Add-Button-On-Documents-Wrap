@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Table } from '@mantine/core';
+import styles from '../styles/Home.module.css';
 import Rows from '../components/Rows';
 
 const Home: NextPage = () => {
@@ -14,20 +15,17 @@ const Home: NextPage = () => {
         <meta name="author" content="John Doe" />
         <title>Document Table</title>
       </Head>
-      <Table
-        striped
-        highlightOnHover
-        horizontalSpacing="xs"
-        onClick={() => setOpen(() => [])}
-      >
-        <thead>
-          <tr>
-            <th>Salary</th>
-            <th>Documents</th>
-          </tr>
-        </thead>
-        <tbody>{<Rows open={open} setOpen={setOpen} />}</tbody>
-      </Table>
+      <div onClick={() => setOpen(() => [])} className={styles.container}>
+        <Table striped highlightOnHover horizontalSpacing="xs">
+          <thead>
+            <tr>
+              <th>Salary</th>
+              <th>Documents</th>
+            </tr>
+          </thead>
+          <tbody>{<Rows open={open} setOpen={setOpen} />}</tbody>
+        </Table>
+      </div>
     </>
   );
 };
