@@ -1,4 +1,6 @@
-const mockData = [
+import { Record } from './types';
+
+const mockData: Record[] = [
   {
     id: '1',
     salary: 15000,
