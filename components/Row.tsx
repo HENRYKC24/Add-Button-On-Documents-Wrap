@@ -17,13 +17,24 @@ const Row: React.FC<{
 }> = ({ open, setOpen, el, index }) => {
   const [show, setShow] = useState<boolean>(false);
   const cell = useRef<HTMLTableRowElement>(null);
+  const checker = useRef(0);
 
   const handleResize = () => {
-    window.location.reload();
-
-    // const rowHeight: number | undefined = cell.current?.offsetHeight;
-    // setShow(!!(rowHeight && rowHeight > 90 && cell.current));
+    checker.current = 0;
+    const rowHeight: number | undefined = cell.current?.offsetHeight;
+    if (cell.current?.children[1].firstChild?.nodeName === 'DIV') {
+      setShow(!!(rowHeight && rowHeight > 90 && cell.current));
+    } else {
+      checker.current = checker.current + 1;
+      setShow(false);
+    }
   };
+
+  useEffect(() => {
+    if(checker.current === 1) {
+      handleResize();
+    }
+  }, [show])
 
   useEffect(() => {
     const rowHeight: number | undefined = cell.current?.offsetHeight;
