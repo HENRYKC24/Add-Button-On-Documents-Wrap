@@ -21,6 +21,15 @@
   cursor: pointer;
 }
 
+.groupFile {
+  border-radius: 5px;
+  margin-right: 5px;
+  color: rgb(190, 186, 186);
+  height: 30px;
+  width: 30px;
+  border: 3px solid;
+}
+
 .document {
   background-color: white;
   border: 1px solid rgb(190, 186, 186);

@@ -16,26 +16,24 @@ const Row: React.FC<{
   el: Record;
 }> = ({ open, setOpen, el, index }) => {
   const [show, setShow] = useState<boolean>(false);
-  const cell = useRef<HTMLTableCellElement>(null);
+  const cell = useRef<HTMLTableRowElement>(null);
 
-  const handleButtonDisplay: () => void = () => {
-    const rowLength: number | undefined = cell.current?.offsetHeight;
-    console.log(rowLength);
-    if (rowLength && rowLength > 90 && cell.current) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
+  const handleResize = () => {
+    window.location.reload();
   };
 
   useEffect(() => {
-    handleButtonDisplay();
+    const rowHeight: number | undefined = cell.current?.offsetHeight;
+    setShow(!!(rowHeight && rowHeight > 90 && cell.current));
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <tr key={el.id}>
+    <tr ref={cell} key={el.id}>
       <td>${el.salary.toLocaleString()}</td>
-      <td ref={cell}>
+      <td>
         {show && (
           <button
             className={styles.expandCollapseButton}
@@ -57,18 +55,11 @@ const Row: React.FC<{
           </button>
         )}
         {!show && (
-          <Group noWrap={false} className={styles.group}>
+          <Group className={styles.group}>
             {el.documents.map((el) => (
               <div className={styles.document} key={el.id}>
                 <FontAwesomeIcon
-                  style={{
-                    borderRadius: 5,
-                    marginRight: '5px',
-                    color: 'rgb(190, 186, 186)',
-                    height: '30px',
-                    width: '30px',
-                    border: '3px solid',
-                  }}
+                  className={styles.groupFile}
                   icon={faFilePdf}
                 />
                 {el.name}
