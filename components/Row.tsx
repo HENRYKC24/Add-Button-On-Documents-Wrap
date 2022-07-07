@@ -20,6 +20,9 @@ const Row: React.FC<{
 
   const handleResize = () => {
     window.location.reload();
+
+    // const rowHeight: number | undefined = cell.current?.offsetHeight;
+    // setShow(!!(rowHeight && rowHeight > 90 && cell.current));
   };
 
   useEffect(() => {
